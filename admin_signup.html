@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Sign Up</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Verdana', sans-serif;
+      background-image: url('images/Grocery Signup.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      color: #0a0101;
+      position: relative;
+    }
+    .signup-container {
+      width: 500px;
+      background-color: rgba(200, 255, 255, 0.75);
+      border-radius: 15px;
+      padding: 30px 25px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      backdrop-filter: blur(5px);
+    }
+    .signup-container h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #333;
+      font-size: 2.5rem;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 15px;
+      width: 100%;
+    }
+    .signup-btn {
+      width: 100%;
+      background-color:  #3eed6a;
+      color: rgb(11, 11, 11);
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 10px;
+    }
+    .signup-btn:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="signup-container">
+    <h2>Admin Sign Up</h2>
+    <form action="admin_signup_handler.php" method="POST">
+      <div class="form-group">
+        <input type="text" name="name" placeholder="Enter Name" required />
+        <input type="email" name="email" placeholder="Enter Email" required />
+        <input type="password" name="password" placeholder="Enter Password" required />
+        <input type="password" name="confirm_password" placeholder="Confirm Password" required />
+      </div>
+      
+      <button type="submit" class="signup-btn">Sign Up </button>
+    </form>
+    <p style="text-align: center; margin-top: 20px;"><a href="index.html" style="color: #333; text-decoration: none; font-size: 1em;">Back to Home</a></p>
+  </div>
+</body>
+</html>

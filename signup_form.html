@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Verdana', sans-serif;
+      background-image: url('images/Grocery Signup.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      color: #0a0101;
+      position: relative;
+    }
+
+    .header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px 40px;
+      text-align: center;
+      width: 100%;
+    }
+
+    .header h1 {
+      color: lab(3.32% 0 0);
+      font-size: 2.5rem;
+      margin: 50;
+    }
+    
+    .signup-container {
+      width: 550px;
+      background-color: rgba(230, 209, 230, 0.55);
+      border-radius: 15px;
+      padding: 30px 25px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      backdrop-filter: blur(5px);
+    }
+
+    .signup-container h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #242121;
+    }
+
+    .form-group {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+    }
+
+    .form-group input {
+      width: 48%; /* Adjust width of inputs to allow them to fit in one line */
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 15px;
+    }
+
+    .signup-btn {
+      width: 100%;
+      background-color: hsla(113, 93%, 27%, 0.793);
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .signup-btn:hover {
+      background-color: #0056b3;
+    }
+
+    .eye-icon {
+      position: absolute;
+      right: 20px;
+      top: 9px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>Sign up soon for Shopping.!</h1>
+  </div>
+
+  <div class="signup-container">
+    <h2>Sign Up</h2>
+    <form action="signup_handler.php" method="POST">
+      <div class="form-group">
+        <input type="text" name="username" placeholder="Enter Username" required />
+        <input type="email" name="email_id" placeholder="Enter Email" required />
+      </div>
+      <div class="form-group">
+        <input type="text" name="phone_no" placeholder="Enter Phone Number" required />
+        <input type="text" name="address" placeholder="Enter Address" required />
+      </div>
+      <input type="password" name="password" id="password" placeholder="Enter Password" required />
+      <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password" required />
+      <button type="submit" class="signup-btn">Submit</button>
+    </form>
+    <p style="text-align: center; margin-top: 20px;"><a href="index.html" style="color: #333; text-decoration: none; font-size: 1em;">Back to Home</a></p>
+  </div>
+
+  <div style="text-align:center; margin-top: 20px;">
+    <a href="admin_signup.html">
+        <button type="button" style="background-color: #00bcd4; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">Sign up as Admin</button>
+    </a>
+  </div>
+
+  <script>
+    function togglePassword() {
+      const passwordField = document.getElementById("password");
+      if (passwordField.type === "password") {
+        passwordField.type = "text";
+      } else {
+        passwordField.type = "password";
+      }
+    }
+  </script>
+
+</body>
+</html>
